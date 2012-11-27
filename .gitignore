@@ -12,3 +12,6 @@ target
 
 # Mac
 .DS_Store
+
+
+AwsCredentials.properties
