@@ -24,6 +24,8 @@
 			.pad100-top { padding-top: 80px; }
 		</style>
 
+		<script type="text/javascript" src="/jwplayer/jwplayer.js"></script>
+		
 		<link href="../css/bootstrap-responsive.css" rel="stylesheet">
 
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -129,9 +131,13 @@
 
 				<div class="span9 scrollable">
 					<div>
-						  <div id="video-pane">
+					
+				<!-- 	  <div id="video-pane">
 							<iframe src="https://www.youtube.com/embed/QZkqC4Lz8dU" width="832" height="468" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 						  </div>
+				-->
+						  <div id="container">Loading the player ...</div>
+					
 					</div>
 				</div>
 
@@ -165,6 +171,20 @@
     <script src="../js/bootstrap-collapse.js"></script>
     <script src="../js/bootstrap-carousel.js"></script>
     <script src="../js/bootstrap-typeahead.js"></script>
+    
+    <script type="text/javascript">
+    	jwplayer("container").setup({
+        	flashplayer: "/jwplayer/jwplayer.flash.swf",
+        	file: "/videos/getting-started.mp4",
+	        height: 468,
+	        // provider: "rtmp",
+	        // streamer: "rtmp://s318o941ger6u2.cloudfront.net/cfx/st",
+	        width: 832
+	    });
+	</script>
+    
+    
+    
 
   </body>
 </html>
