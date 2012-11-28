@@ -171,7 +171,59 @@
     <script src="../js/bootstrap-collapse.js"></script>
     <script src="../js/bootstrap-carousel.js"></script>
     <script src="../js/bootstrap-typeahead.js"></script>
+   
+
+<!-- 
+	<script type="text/javascript">
+    	jwplayer("container").setup({
+        	'flashplayer': '/jwplayer/jwplayer.flash.swf',
+        	'file': 'getting-started.mp4',
+	        'height': '480',
+	        'provider': 'rtmp',
+	        'streamer': 'rtmp://s318o941ger6u2.cloudfront.net/cfx/st',
+	        'width': '720'
+	    });
+	</script>
+-->    
+
+    <script type="text/javascript">
+              jwplayer('container').setup(
+              {
+                  'id': 'container',
+                  'wmode': 'transparent',
+                  'icons': 'true',
+                  'allowscriptaccess': 'always',
+                  'allownetworking': 'all',
+                  'file': 'getting-started.mp4',
+                  'width': '720', 'height': '307',
+                  'controlbar': 'bottom',
+                  'dock': 'false',
+                  'provider':'rtmp',
+                  'streamer': 'rtmp://s318o941ger6u2.cloudfront.net/cfx/st',
+                  'modes': [
+                      {type: 'flash', src: 'http://myyoutube-4mpiby9q4d.elasticbeanstalk.com/jwplayer/jwplayer.flash.swf'},
+                      {
+                        type: 'html5',
+                        config: {
+                         'file': 'http://my.you.tube.bucket.com.s3.amazonaws.com/getting-started.mp4',
+                         'provider': 'video'
+                        }
+                      },
+                      {
+                        type: 'download',
+                        config: {
+                         'file': 'http://my.you.tube.bucket.com.s3.amazonaws.com/getting-started.mp4',
+                         'provider': 'video'
+                        }
+                      }
+                  ]
+              });
+          </script>
     
+    
+    
+    
+    <!-- 
     <script type="text/javascript">
     	jwplayer("container").setup({
         	flashplayer: "/jwplayer/jwplayer.flash.swf",
@@ -182,9 +234,7 @@
 	        width: 832
 	    });
 	</script>
-    
-    
-    
+    -->
 
   </body>
 </html>
