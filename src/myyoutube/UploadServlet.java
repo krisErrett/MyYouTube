@@ -27,7 +27,7 @@ import com.amazonaws.services.s3.model.S3ObjectSummary;
 @SuppressWarnings("serial")
 public class UploadServlet extends HttpServlet
 {
-    public static final String AWS_S3_BUCKET = "randy-1354310562177";
+    public static final String AWS_S3_BUCKET = "my.you.tube.bucket.com";
     
     private final AWSCredentials CREDS;
     private final AmazonS3 S3;
