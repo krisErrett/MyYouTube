@@ -15,7 +15,7 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.commons.io.IOUtils;
 
 import com.amazonaws.auth.AWSCredentials;
-import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.auth.PropertiesCredentials;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.model.CannedAccessControlList;
@@ -28,10 +28,20 @@ import com.amazonaws.services.s3.model.S3ObjectSummary;
 public class UploadServlet extends HttpServlet
 {
     public static final String AWS_S3_BUCKET = "randy-1354310562177";
-    private static final String AWS_ACCESS_KEY = "AKIAIYA4NVASTTYAM4QA";
-    private static final String AWS_SECRET_KEY = "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";
-    private static final AWSCredentials CREDS = new BasicAWSCredentials(AWS_ACCESS_KEY, AWS_SECRET_KEY);
-    private static final AmazonS3 S3 = new AmazonS3Client(CREDS);
+    
+    //private static final String AWS_ACCESS_KEY = "AKIAIYA4NVASTTYAM4QA";
+    //private static final String AWS_SECRET_KEY = "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";
+    //private static final AWSCredentials CREDS = new BasicAWSCredentials(AWS_ACCESS_KEY, AWS_SECRET_KEY);
+    
+    private final AWSCredentials CREDS;
+    private final AmazonS3 S3;
+    
+    public UploadServlet() throws IOException
+    {
+        CREDS = new PropertiesCredentials(getClass().getClassLoader()
+                .getResourceAsStream("AwsCredentials.properties"));
+        S3 = new AmazonS3Client(CREDS);
+    }
     
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException
     {

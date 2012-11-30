@@ -8,7 +8,7 @@
 <%@ page import="com.amazonaws.services.s3.model.*" %>
 <%@ page import="com.amazonaws.services.simpledb.*" %>
 <%@ page import="com.amazonaws.services.simpledb.model.*" %>
-
+<!-- ... -->
 <%! 
 	private AmazonEC2      ec2;
     private AmazonS3        s3;
