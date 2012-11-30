@@ -29,10 +29,6 @@ public class UploadServlet extends HttpServlet
 {
     public static final String AWS_S3_BUCKET = "randy-1354310562177";
     
-    //private static final String AWS_ACCESS_KEY = "AKIAIYA4NVASTTYAM4QA";
-    //private static final String AWS_SECRET_KEY = "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";
-    //private static final AWSCredentials CREDS = new BasicAWSCredentials(AWS_ACCESS_KEY, AWS_SECRET_KEY);
-    
     private final AWSCredentials CREDS;
     private final AmazonS3 S3;
     
