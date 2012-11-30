@@ -1,4 +1,4 @@
-
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -72,13 +72,12 @@
 			
 				<div class="span3 scrollable">
 					<div>
+					    <%-- <jsp:include page="videos.jsp" flush="true"/> --%>
 						<!-- <a href="#" onclick="jwplayer().load({ 'file':'mp4:getting-started' }).play(); return false;">Click Here</a><br><br> -->
 						<a href="url">Video here</a><br><br>
 						<a href="url">Video here</a><br><br>
 						<a href="url">Video here</a><br><br>
 						<a href="url">Video here</a><br><br>
-						
-			
 					</div>
 				</div>
 

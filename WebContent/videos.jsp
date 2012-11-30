@@ -21,37 +21,20 @@
         ec2 = new AmazonEC2Client(credentials);
         s3  = new AmazonS3Client(credentials);
     }
-%>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <title>File Listing</title>
-    <link rel="stylesheet" href="styles/styles.css" type="text/css" media="screen">
-</head>
-<body>
-    <div id="content" class="container">
-        <div class="section grid grid5 s3">
-            <h2>Videos:</h2>
-            <%
-              ObjectListing objects = s3.listObjects(UploadServlet.AWS_S3_BUCKET);
-		       do
-		       {
-		           for (S3ObjectSummary s : objects.getObjectSummaries())
-		           {
-		               %>
-		                 <li>
-		                   <a href="https://s3.amazonaws.com/randy-1354310562177/<%=s.getKey()%>">
-		                     <%=s.getKey()%>
-		                   </a>
-		                 </li>
-		               <%
-		           }
-		           objects = s3.listNextBatchOfObjects(objects);
-		       } while (objects.isTruncated());
-		       %>
-        </div>
-    </div>
-</body>
-</html>
+   
+   ObjectListing objects = s3.listObjects(UploadServlet.AWS_S3_BUCKET);
+   do
+   {
+       for (S3ObjectSummary s : objects.getObjectSummaries())
+       {
+           %>
+             <!-- <a href="#" onclick="jwplayer().load({ 'file':'mp4:getting-started' }).play(); return false;">Click Here</a><br><br>-->
+             <a href="https://s3.amazonaws.com/randy-1354310562177/<%=s.getKey()%>">
+               <%=s.getKey()%>
+             </a>
+             <br/><br/>
+           <%
+       }
+       objects = s3.listNextBatchOfObjects(objects);
+   } while (objects.isTruncated());
+ %>
