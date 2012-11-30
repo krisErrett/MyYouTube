@@ -72,80 +72,23 @@
 			
 				<div class="span3 scrollable">
 					<div>
+						<!-- <a href="#" onclick="jwplayer().load({ 'file':'mp4:getting-started' }).play(); return false;">Click Here</a><br><br> -->
 						<a href="url">Video here</a><br><br>
 						<a href="url">Video here</a><br><br>
 						<a href="url">Video here</a><br><br>
 						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>	
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>						
+						
+			
 					</div>
 				</div>
 
 				<div class="span9 scrollable">
 					<div>
-					
-				<!-- 	  <div id="video-pane">
-							<iframe src="https://www.youtube.com/embed/QZkqC4Lz8dU" width="832" height="468" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-						  </div>
-				-->
-						  <div id="container">Loading the player ...</div>
-					
+						  <div id="container">Loading the video player ...</div>					
 					</div>
 				</div>
-
 			</div><!--/row-->
-
-		<hr>
-
-
+			<hr>
 		</div><!--/.container-->
 
     <!-- Le javascript
@@ -171,70 +114,20 @@
     <script src="../js/bootstrap-collapse.js"></script>
     <script src="../js/bootstrap-carousel.js"></script>
     <script src="../js/bootstrap-typeahead.js"></script>
-   
 
-<!-- 
-	<script type="text/javascript">
-    	jwplayer("container").setup({
-        	'flashplayer': '/jwplayer/jwplayer.flash.swf',
-        	'file': 'getting-started.mp4',
-	        'height': '480',
-	        'provider': 'rtmp',
-	        'streamer': 'rtmp://s318o941ger6u2.cloudfront.net/cfx/st',
-	        'width': '720'
-	    });
+	<script type='text/javascript'>
+		jwplayer("container").setup({
+		        file: "mp4:getting-started",
+				height: 480, width: 720,
+				modes: video_modes,
+		        modes: [
+	  		             { type: "flash", src: "/jwplayer/jwplayer.flash.swf" },
+		                 { type: "html5", config: { file: "http://doblfg9j68y74.cloudfront.net/getting-started.mp4", provider: "video" }}
+  			           ],
+		        provider: "rtmp",
+		        streamer: "rtmp://s318o941ger6u2.cloudfront.net/cfx/st"
+		    });
 	</script>
--->    
-
-    <script type="text/javascript">
-              jwplayer('container').setup(
-              {
-                  'id': 'container',
-                  'wmode': 'transparent',
-                  'icons': 'true',
-                  'allowscriptaccess': 'always',
-                  'allownetworking': 'all',
-                  'file': 'getting-started.mp4',
-                  'width': '720', 'height': '480',
-                  'controlbar': 'bottom',
-                  'dock': 'false',
-                  'provider':'rtmp',
-                  'streamer': 'rtmp://s318o941ger6u2.cloudfront.net/cfx/st',
-                  'modes': [
-                      {type: 'flash', src: 'http://myyoutube-4mpiby9q4d.elasticbeanstalk.com/jwplayer/jwplayer.flash.swf'},
-                      {
-                        type: 'html5',
-                        config: {
-                         'file': 'http://my.you.tube.bucket.com.s3.amazonaws.com/getting-started.mp4',
-                         'provider': 'video'
-                        }
-                      },
-                      {
-                        type: 'download',
-                        config: {
-                         'file': 'http://my.you.tube.bucket.com.s3.amazonaws.com/getting-started.mp4',
-                         'provider': 'video'
-                        }
-                      }
-                  ]
-              });
-          </script>
-    
-    
-    
-    
-    <!-- 
-    <script type="text/javascript">
-    	jwplayer("container").setup({
-        	flashplayer: "/jwplayer/jwplayer.flash.swf",
-        	file: "/videos/getting-started.mp4",
-	        height: 468,
-	        // provider: "rtmp",
-	        // streamer: "rtmp://s318o941ger6u2.cloudfront.net/cfx/st",
-	        width: 832
-	    });
-	</script>
-    -->
 
   </body>
 </html>
