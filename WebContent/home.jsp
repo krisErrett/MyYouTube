@@ -74,7 +74,7 @@
 					<div>
 					    <%-- <jsp:include page="videos.jsp" flush="true"/> --%>
 						<!-- <a href="#" onclick="jwplayer().load({ 'file':'mp4:getting-started' }).play(); return false;">Click Here</a><br><br> -->
-						<a href="url">Video here</a><br><br>
+						<a href="url">Video 2here</a><br><br>
 						<a href="url">Video here</a><br><br>
 						<a href="url">Video here</a><br><br>
 						<a href="url">Video here</a><br><br>
@@ -118,7 +118,6 @@
 		jwplayer("container").setup({
 		        file: "mp4:getting-started",
 				height: 480, width: 720,
-				modes: video_modes,
 		        modes: [
 	  		             { type: "flash", src: "/jwplayer/jwplayer.flash.swf" },
 		                 { type: "html5", config: { file: "http://doblfg9j68y74.cloudfront.net/getting-started.mp4", provider: "video" }}
