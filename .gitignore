@@ -2,9 +2,9 @@
 target
 
 # Eclipse
-#.settings
-#.project
-#.classpath
+.settings
+.project
+.classpath
 .cache
 
 # Java & package files #
