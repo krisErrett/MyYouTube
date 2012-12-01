@@ -50,7 +50,8 @@
 					<a class="brand" href="#">MyYouTube</a>
 					<div class="nav-collapse collapse">
 						<ul class="nav">
-							<li class="dropdown">
+							<!--
+								<li class="dropdown">
 								<a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Upload <b class="caret"></b></a>
 								<ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
 									<li><a tabindex="-1" href="http://google.com">Action</a></li>
@@ -60,6 +61,7 @@
 								</ul>
 							</li>
 							<li><a href="#contact">List</a></li>
+							-->
 						</ul>
 					</div><!--/.nav-collapse -->
 				</div>
@@ -72,18 +74,24 @@
 			
 				<div class="span3 scrollable">
 					<div>
-					    <%-- <jsp:include page="videos.jsp" flush="true"/> --%>
-						<!-- <a href="#" onclick="jwplayer().load({ 'file':'mp4:getting-started' }).play(); return false;">Click Here</a><br><br> -->
-						<a href="url">Video 2here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
-						<a href="url">Video here</a><br><br>
+					    <jsp:include page="videos.jsp" flush="true"/>
+					<!-- 
+						<a href="#" onclick="jwplayer('container').load({ 'file': 'rtmp://s318o941ger6u2.cloudfront.net/cfx/st/mp4:getting-started.mp4' }).play();">Click Here</a><br><br>
+						<a href="#" onclick="jwplayer('container').load({ 'file': 'rtmp://s318o941ger6u2.cloudfront.net/cfx/st/mp4:advanced-parameters.mp4' }).play();">Click Here</a><br><br>
+					-->
 					</div>
 				</div>
 
 				<div class="span9 scrollable">
 					<div>
-						  <div id="container">Loading the video player ...</div>					
+						<div id="container">Loading the video player ...</div>
+			    		<script type='text/javascript'>
+							jwplayer("container").setup({
+	        					file: 'rtmp://s318o941ger6u2.cloudfront.net/cfx/st/mp4:getting-started.mp4', 
+	        					height: 480, 
+	        					width: 720
+						    });
+						</script>					
 					</div>
 				</div>
 			</div><!--/row-->
@@ -114,7 +122,8 @@
     <script src="../js/bootstrap-carousel.js"></script>
     <script src="../js/bootstrap-typeahead.js"></script>
 
-	<script type='text/javascript'>
+
+<!-- 	<script type='text/javascript'>
 		jwplayer("container").setup({
 		        file: "mp4:getting-started",
 				height: 480, width: 720,
@@ -125,7 +134,7 @@
 		        provider: "rtmp",
 		        streamer: "rtmp://s318o941ger6u2.cloudfront.net/cfx/st"
 		    });
-	</script>
+	</script> -->
 
   </body>
 </html>

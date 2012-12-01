@@ -28,11 +28,8 @@
        for (S3ObjectSummary s : objects.getObjectSummaries())
        {
            %>
-             <!-- <a href="#" onclick="jwplayer().load({ 'file':'mp4:getting-started' }).play(); return false;">Click Here</a><br><br>-->
-             <a href="https://s3.amazonaws.com/randy-1354310562177/<%=s.getKey()%>">
-               <%=s.getKey()%>
-             </a>
-             <br/><br/>
+             <a href="#" onclick="jwplayer('container').load({ 'file':'rtmp://s318o941ger6u2.cloudfront.net/cfx/st/mp4:<%=s.getKey()%> }).play();"><%=s.getKey()%></a><br><br>
+             <%-- <a href="https://s3.amazonaws.com/randy-1354310562177/<%=s.getKey()%>"><%=s.getKey()%></a><br/><br/> --%>
            <%
        }
        objects = s3.listNextBatchOfObjects(objects);
