@@ -31,7 +31,7 @@ public class UploadServlet extends HttpServlet
     
     private final AWSCredentials CREDS;
     private final AmazonS3 S3;
-    
+      
     public UploadServlet() throws IOException
     {
         CREDS = new PropertiesCredentials(getClass().getClassLoader()
