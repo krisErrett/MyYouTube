@@ -2,13 +2,41 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Upload Form!</title>
+
+<script type="text/javascript">
+
+function sleep(ms)
+{
+	var dt = new Date();
+	dt.setTime(dt.getTime() + ms);
+	while (new Date().getTime() < dt.getTime());
+}
+	
+ function showHide(hide, show) {
+   var hideDiv = document.getElementById(hide);
+   hideDiv.style.display = 'none';
+   var showDiv = document.getElementById(show);
+   showDiv.style.display = '';
+   document.forms["uploadForm"].submit();
+ }
+</script>
+
+
 </head>
 <body>
-	<form action="upload" method="post" enctype="multipart/form-data">
-		<input type="file" name="file" size="50" /> 
-		<br /> 
-		<input type="submit" value="Upload File" />
-	</form>
+<div>
+	 <div id="form">
+        <form name="uploadForm" action="http://myyoutube-pqz43fmv3m.elasticbeanstalk.com/upload" method="post" enctype="multipart/form-data" onsubmit="showHide('form','spinner'); return false;">
+	        <input type="file" name="file" size="50" /> 
+	        <br /> 
+	        <input type="submit" value="Upload File" name="submit" />
+        </form>
+    </div>
+
+    <div id="spinner" style="display:none">
+        <img src="spinner.gif" />
+    </div>
+</div>
 </body>
 </html>
+

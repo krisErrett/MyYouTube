@@ -13,7 +13,7 @@
 	private AmazonEC2      ec2;
     private AmazonS3        s3;
  %>
-
+<iframe width="200" height="100" frameBorder="0" src="upload.html"></iframe><br><br>
 <%
     if (ec2 == null) {
         AWSCredentials credentials = new PropertiesCredentials(
@@ -27,10 +27,12 @@
    {
        for (S3ObjectSummary s : objects.getObjectSummaries())
        {
+           if(s.getKey().contains("mp4")) {
            %>
              <a href="#" onclick="jwplayer('container').load({ 'file':'rtmp://s318o941ger6u2.cloudfront.net/cfx/st/mp4:<%=s.getKey()%>' }).play();"><%=s.getKey()%></a><br><br>
              <%-- <a href="https://s3.amazonaws.com/randy-1354310562177/<%=s.getKey()%>"><%=s.getKey()%></a><br/><br/> --%>
            <%
+           }
        }
        objects = s3.listNextBatchOfObjects(objects);
    } while (objects.isTruncated());

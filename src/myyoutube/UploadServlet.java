@@ -69,7 +69,7 @@ public class UploadServlet extends HttpServlet
                     );
                 }
             }
-            resp.getWriter().println("Success.");
+            resp.getWriter().println("<script>window.top.location.href = \"home.jsp\"; </script>");
         } catch (FileUploadException e) {
             throw new ServletException("Cannot parse multipart request.", e);
         }
