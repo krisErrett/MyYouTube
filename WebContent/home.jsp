@@ -75,10 +75,10 @@
 				<div class="span3 scrollable">
 					<div>
 					    <jsp:include page="videos.jsp" flush="true"/>
-					<!-- 
-						<a href="#" onclick="jwplayer('container').load({ 'file': 'rtmp://s318o941ger6u2.cloudfront.net/cfx/st/mp4:getting-started.mp4' }).play();">Click Here</a><br><br>
-						<a href="#" onclick="jwplayer('container').load({ 'file': 'rtmp://s318o941ger6u2.cloudfront.net/cfx/st/mp4:advanced-parameters.mp4' }).play();">Click Here</a><br><br>
-					-->
+						<!-- 
+							<a href="#" onclick="jwplayer('container').load({ 'file': 'rtmp://s318o941ger6u2.cloudfront.net/cfx/st/mp4:getting-started.mp4' }).play();">Click Here</a><br><br>
+							<a href="#" onclick="jwplayer('container').load({ 'file': 'rtmp://s318o941ger6u2.cloudfront.net/cfx/st/mp4:advanced-parameters.mp4' }).play();">Click Here</a><br><br>
+						-->
 					</div>
 				</div>
 
